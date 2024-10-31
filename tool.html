@@ -19,12 +19,6 @@
 
     <main>
         <section>
-            <div class="banner">
-                <h2>Calculate Roots of Quadratic Equations!</h2>
-                <p>Enter the coefficients to find the roots.</p>
-            </div>
-        </section>
-        <section>
             <h2>Enter Coefficients</h2>
             <form id="quadraticForm">
                 <label for="a">a:</label>
@@ -54,11 +48,11 @@
             let result;
 
             if (discriminant > 0) {
-                const root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
-                const root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+                const root1 = ((-b + Math.sqrt(discriminant)) / (2 * a)).toFixed(2);
+                const root2 = ((-b - Math.sqrt(discriminant)) / (2 * a)).toFixed(2);
                 result = `Roots are real and different: ${root1} and ${root2}`;
             } else if (discriminant === 0) {
-                const root = -b / (2 * a);
+                const root = (-b / (2 * a)).toFixed(2);
                 result = `Root is real and repeated: ${root}`;
             } else {
                 result = 'Roots are complex and different.';
